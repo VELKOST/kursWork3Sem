@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Владислав\\Desktop\\kursovaya work\\kursovaya work\\kursovaya work.csproj": {}
+    "C:\\Users\\Владислав\\Desktop\\oop\\kursovaya_work\\kursovaya workNote\\kursovaya work\\kursovaya work.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Владислав\\Desktop\\kursovaya work\\kursovaya work\\kursovaya work.csproj": {
+    "C:\\Users\\Владислав\\Desktop\\oop\\kursovaya_work\\kursovaya workNote\\kursovaya work\\kursovaya work.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Владислав\\Desktop\\kursovaya work\\kursovaya work\\kursovaya work.csproj",
+        "projectUniqueName": "C:\\Users\\Владислав\\Desktop\\oop\\kursovaya_work\\kursovaya workNote\\kursovaya work\\kursovaya work.csproj",
         "projectName": "kursovaya work",
-        "projectPath": "C:\\Users\\Владислав\\Desktop\\kursovaya work\\kursovaya work\\kursovaya work.csproj",
+        "projectPath": "C:\\Users\\Владислав\\Desktop\\oop\\kursovaya_work\\kursovaya workNote\\kursovaya work\\kursovaya work.csproj",
         "packagesPath": "C:\\Users\\Владислав\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Владислав\\Desktop\\kursovaya work\\kursovaya work\\obj\\",
+        "outputPath": "C:\\Users\\Владислав\\Desktop\\oop\\kursovaya_work\\kursovaya workNote\\kursovaya work\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Владислав\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

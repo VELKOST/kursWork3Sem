@@ -16,10 +16,18 @@ namespace kursovaya_work
             Console.WriteLine($"Клиент {client.Name} добавлен.");
         }
 
-        public void RemoveClient(Client client)
+        public void RemoveClient(string name)
         {
-            clients.Remove(client);
-            Console.WriteLine($"Клиент {client.Name} удален.");
+            var client = clients.FirstOrDefault(c => c.Name == name);
+            if (client != null)
+            {
+                clients.Remove(client);
+                Console.WriteLine($"Клиент {client.Name} удален.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: клиент с таким именем не найден.");
+            }
         }
 
         public void DisplayClients()
@@ -31,6 +39,24 @@ namespace kursovaya_work
                 Console.WriteLine($"Имя: {client.Name}, Контактная информация: {client.ContactInfo}, Тип абонемента: {client.SubscriptionType}");
             }
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
+        }
+
+        public List<Client> GetClients()
+        {
+            return clients;
+        }
+
+        public Client GetClient(int index)
+        {
+            if (index >= 0 && index < clients.Count)
+            {
+                return clients[index];
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: индекс вне диапазона.");
+                return null;
+            }
         }
     }
 }

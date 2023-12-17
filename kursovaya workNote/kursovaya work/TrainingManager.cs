@@ -16,10 +16,18 @@ namespace kursovaya_work
             Console.WriteLine($"Тренер {trainer.Name} добавлен.");
         }
 
-        public void RemoveTrainer(Trainer trainer)
+        public void RemoveTrainer(string name)
         {
-            trainers.Remove(trainer);
-            Console.WriteLine($"Тренер {trainer.Name} удален.");
+            var trainer = trainers.FirstOrDefault(t => t.Name == name);
+            if (trainer != null)
+            {
+                trainers.Remove(trainer);
+                Console.WriteLine($"Тренер {trainer.Name} удален.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: тренер с таким именем не найден.");
+            }
         }
 
         public void DisplayTrainers()
@@ -32,5 +40,20 @@ namespace kursovaya_work
             }
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
         }
+
+        public Trainer GetTrainer(int index)
+        {
+            if (index >= 0 && index < trainers.Count)
+            {
+                return trainers[index];
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: индекс вне диапазона.");
+                return null;
+            }
+        }
     }
+
+
 }

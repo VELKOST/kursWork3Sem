@@ -19,31 +19,37 @@ namespace kursovaya_work
         // Список для хранения клиентов и стоимости их абонементов
         private List<Tuple<Client, double>> clientCosts = new List<Tuple<Client, double>>();
 
-        public void CalculateAndStoreCost(Client client)
+        public void CalculateAndStoreCost(List<Client> clients)
         {
-            double totalCost = 0;
+            // Очищаем текущий список стоимостей
+            clientCosts.Clear();
 
-            // Учитываем стоимость абонемента
-            switch (client.SubscriptionType)
+            foreach (var client in clients)
             {
-                case "Месячный":
-                    totalCost += baseCostMonthly;
-                    break;
-                case "Годовой":
-                    totalCost += baseCostAnnual;
-                    break;
-                case "Разовый":
-                    totalCost += baseCostSingle;
-                    break;
+                double totalCost = 0;
+
+                // Учитываем стоимость абонемента
+                switch (client.SubscriptionType)
+                {
+                    case "Месячный":
+                        totalCost += baseCostMonthly;
+                        break;
+                    case "Годовой":
+                        totalCost += baseCostAnnual;
+                        break;
+                    case "Разовый":
+                        totalCost += baseCostSingle;
+                        break;
+                }
+
+                // Учитываем стоимость дополнительных услуг
+                totalCost += client.PersonalTrainings * personalTrainingCost;
+                totalCost += client.Massages * massageCost;
+                totalCost += client.Saunas * saunaCost;
+
+                // Добавляем клиента и стоимость его абонемента в список
+                clientCosts.Add(new Tuple<Client, double>(client, totalCost));
             }
-
-            // Учитываем стоимость дополнительных услуг
-            totalCost += client.PersonalTrainings * personalTrainingCost;
-            totalCost += client.Massages * massageCost;
-            totalCost += client.Saunas * saunaCost;
-
-            // Добавляем клиента и стоимость его абонемента в список
-            clientCosts.Add(new Tuple<Client, double>(client, totalCost));
         }
 
         public void DisplayCosts()

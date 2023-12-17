@@ -13,3 +13,17 @@ C:\Users\Владислав\Desktop\kursovaya work\kursovaya work\obj\Debug\net7
 C:\Users\Владислав\Desktop\kursovaya work\kursovaya work\obj\Debug\net7.0\kursovaya work.pdb
 C:\Users\Владислав\Desktop\kursovaya work\kursovaya work\obj\Debug\net7.0\kursovaya work.genruntimeconfig.cache
 C:\Users\Владислав\Desktop\kursovaya work\kursovaya work\obj\Debug\net7.0\ref\kursovaya work.dll
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\bin\Debug\net7.0\kursovaya work.exe
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\bin\Debug\net7.0\kursovaya work.deps.json
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\bin\Debug\net7.0\kursovaya work.runtimeconfig.json
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\bin\Debug\net7.0\kursovaya work.dll
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\bin\Debug\net7.0\kursovaya work.pdb
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.AssemblyInfoInputs.cache
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.AssemblyInfo.cs
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.csproj.CoreCompileInputs.cache
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.dll
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\refint\kursovaya work.dll
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.pdb
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\kursovaya work.genruntimeconfig.cache
+C:\Users\Владислав\Desktop\oop\kursovaya_work\kursovaya workNote\kursovaya work\obj\Debug\net7.0\ref\kursovaya work.dll
