@@ -1,0 +1,10 @@
+Тренер1,trainer1@mail.com,Йога
+Тренер2,trainer2@mail.com,Йога
+Тренер3,trainer3@mail.com,Йога
+Тренер4,trainer4@mail.com,Йога
+Тренер5,trainer5@mail.com,Йога
+Тренер6,trainer6@mail.com,Йога
+Тренер7,trainer7@mail.com,Йога
+Тренер8,trainer8@mail.com,Йога
+Тренер9,trainer9@mail.com,Йога
+Тренер10,trainer10@mail.com,Йога

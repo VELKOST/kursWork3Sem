@@ -1,0 +1,10 @@
+Клиент1,client1@mail.com,Месячный,2,1,0
+Клиент2,client2@mail.com,Месячный,2,1,0
+Клиент3,client3@mail.com,Месячный,2,1,0
+Клиент4,client4@mail.com,Месячный,2,1,0
+Клиент5,client5@mail.com,Месячный,2,1,0
+Клиент6,client6@mail.com,Месячный,2,1,0
+Клиент7,client7@mail.com,Месячный,2,1,0
+Клиент8,client8@mail.com,Месячный,2,1,0
+Клиент9,client9@mail.com,Месячный,2,1,0
+Клиент10,client10@mail.com,Месячный,2,1,0

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace kursovaya_work
         {
             clients.Add(client);
             Console.WriteLine($"Клиент {client.Name} добавлен.");
+            SaveClientsToFile();
         }
 
         public void RemoveClient(string name)
@@ -23,6 +25,7 @@ namespace kursovaya_work
             {
                 clients.Remove(client);
                 Console.WriteLine($"Клиент {client.Name} удален.");
+                SaveClientsToFile();
             }
             else
             {
@@ -32,6 +35,7 @@ namespace kursovaya_work
 
         public void DisplayClients()
         {
+            LoadClientsFromFile();
             Console.WriteLine("\nСписок клиентов:");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
             foreach (var client in clients)
@@ -56,6 +60,39 @@ namespace kursovaya_work
             {
                 Console.WriteLine("Ошибка: индекс вне диапазона.");
                 return null;
+            }
+        }
+
+        private void SaveClientsToFile()
+        {
+            using (StreamWriter writer = new StreamWriter("clients.txt"))
+            {
+                foreach (var client in clients)
+                {
+                    writer.WriteLine($"{client.Name},{client.ContactInfo},{client.SubscriptionType},{client.PersonalTrainings},{client.Massages},{client.Saunas}");
+                }
+            }
+        }
+
+        private void LoadClientsFromFile()
+        {
+            clients.Clear();
+            using (StreamReader reader = new StreamReader("clients.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] parts = line.Split(',');
+                    string name = parts[0];
+                    string contactInfo = parts[1];
+                    string subscriptionType = parts[2];
+                    int personalTrainings = int.Parse(parts[3]);
+                    int massages = int.Parse(parts[4]);
+                    int saunas = int.Parse(parts[5]);
+
+                    Client client = new Client(name, contactInfo, subscriptionType, personalTrainings, massages, saunas);
+                    clients.Add(client);
+                }
             }
         }
     }

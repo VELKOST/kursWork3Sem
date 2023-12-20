@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace kursovaya_work
         {
             trainers.Add(trainer);
             Console.WriteLine($"Тренер {trainer.Name} добавлен.");
+            SaveTrainersToFile();
         }
 
         public void RemoveTrainer(string name)
@@ -23,6 +25,7 @@ namespace kursovaya_work
             {
                 trainers.Remove(trainer);
                 Console.WriteLine($"Тренер {trainer.Name} удален.");
+                SaveTrainersToFile();
             }
             else
             {
@@ -32,6 +35,7 @@ namespace kursovaya_work
 
         public void DisplayTrainers()
         {
+            LoadTrainersFromFile();
             Console.WriteLine("\nСписок тренеров:");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
             foreach (var trainer in trainers)
@@ -53,7 +57,35 @@ namespace kursovaya_work
                 return null;
             }
         }
+
+        private void SaveTrainersToFile()
+        {
+            using (StreamWriter writer = new StreamWriter("trainers.txt"))
+            {
+                foreach (var trainer in trainers)
+                {
+                    writer.WriteLine($"{trainer.Name},{trainer.ContactInfo},{trainer.Specialization}");
+                }
+            }
+        }
+
+        private void LoadTrainersFromFile()
+        {
+            trainers.Clear();
+            using (StreamReader reader = new StreamReader("trainers.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] parts = line.Split(',');
+                    string name = parts[0];
+                    string contactInfo = parts[1];
+                    string specialization = parts[2];
+
+                    Trainer trainer = new Trainer(name, contactInfo, specialization);
+                    trainers.Add(trainer);
+                }
+            }
+        }
     }
-
-
 }

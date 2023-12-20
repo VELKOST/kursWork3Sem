@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,19 @@ namespace kursovaya_work
         {
             schedule.Add(session);
             Console.WriteLine($"Тренировка {session.TrainingType} добавлена в расписание.");
+            SaveScheduleToFile();
         }
 
         public void RemoveTrainingSession(TrainingSession session)
         {
             schedule.Remove(session);
             Console.WriteLine($"Тренировка {session.TrainingType} удалена из расписания.");
+            SaveScheduleToFile();
         }
 
         public void DisplaySchedule()
         {
+            LoadScheduleFromFile();
             Console.WriteLine("\nРасписание тренировок:");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
             foreach (var session in schedule)
@@ -45,7 +49,36 @@ namespace kursovaya_work
                 return null;
             }
         }
+
+        private void SaveScheduleToFile()
+        {
+            using (StreamWriter writer = new StreamWriter("schedule.txt"))
+            {
+                foreach (var session in schedule)
+                {
+                    writer.WriteLine($"{session.DateAndTime},{session.Trainer.Name},{session.TrainingType}");
+                }
+            }
+        }
+
+        private void LoadScheduleFromFile()
+        {
+            schedule.Clear();
+            using (StreamReader reader = new StreamReader("schedule.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] parts = line.Split(',');
+                    DateTime dateAndTime = DateTime.Parse(parts[0]);
+                    string trainerName = parts[1];
+                    string trainingType = parts[2];
+
+                    Trainer trainer = new Trainer(trainerName, "", "");
+                    TrainingSession session = new TrainingSession(dateAndTime, trainer, trainingType);
+                    schedule.Add(session);
+                }
+            }
+        }
     }
-
 }
-
