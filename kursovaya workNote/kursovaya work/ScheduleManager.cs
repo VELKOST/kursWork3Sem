@@ -14,14 +14,12 @@ namespace kursovaya_work
         public void AddTrainingSession(TrainingSession session)
         {
             schedule.Add(session);
-            Console.WriteLine($"Тренировка {session.TrainingType} добавлена в расписание.");
             SaveScheduleToFile();
         }
 
         public void RemoveTrainingSession(TrainingSession session)
         {
             schedule.Remove(session);
-            Console.WriteLine($"Тренировка {session.TrainingType} удалена из расписания.");
             SaveScheduleToFile();
         }
 
@@ -45,7 +43,6 @@ namespace kursovaya_work
             }
             else
             {
-                Console.WriteLine("Ошибка: индекс вне диапазона.");
                 return null;
             }
         }

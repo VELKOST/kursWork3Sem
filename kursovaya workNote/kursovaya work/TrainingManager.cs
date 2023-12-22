@@ -14,7 +14,6 @@ namespace kursovaya_work
         public void AddTrainer(Trainer trainer)
         {
             trainers.Add(trainer);
-            Console.WriteLine($"Тренер {trainer.Name} добавлен.");
             SaveTrainersToFile();
         }
 
@@ -24,12 +23,7 @@ namespace kursovaya_work
             if (trainer != null)
             {
                 trainers.Remove(trainer);
-                Console.WriteLine($"Тренер {trainer.Name} удален.");
                 SaveTrainersToFile();
-            }
-            else
-            {
-                Console.WriteLine("Ошибка: тренер с таким именем не найден.");
             }
         }
 
@@ -53,7 +47,6 @@ namespace kursovaya_work
             }
             else
             {
-                Console.WriteLine("Ошибка: индекс вне диапазона.");
                 return null;
             }
         }

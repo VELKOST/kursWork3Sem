@@ -14,7 +14,6 @@ namespace kursovaya_work
         public void AddClient(Client client)
         {
             clients.Add(client);
-            Console.WriteLine($"Клиент {client.Name} добавлен.");
             SaveClientsToFile();
         }
 
@@ -24,13 +23,9 @@ namespace kursovaya_work
             if (client != null)
             {
                 clients.Remove(client);
-                Console.WriteLine($"Клиент {client.Name} удален.");
                 SaveClientsToFile();
             }
-            else
-            {
-                Console.WriteLine("Ошибка: клиент с таким именем не найден.");
-            }
+          
         }
 
         public void DisplayClients()
@@ -58,7 +53,6 @@ namespace kursovaya_work
             }
             else
             {
-                Console.WriteLine("Ошибка: индекс вне диапазона.");
                 return null;
             }
         }
